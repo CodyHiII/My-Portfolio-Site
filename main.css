@@ -36,7 +36,8 @@ nav {
     transition: all 400ms ease-in;
 }
 .nav-scroll {
-    background-color: rgba(0, 0, 0, .8);
+    background-color: rgba(0, 0, 0, .85);
+    /* box-shadow: 3px 0 10px 5px rgba(0,0,0,.3); */
 }
 
 nav ul {
@@ -105,9 +106,12 @@ nav ul a:hover {
     color: white;
     font-weight: 900;
     text-shadow: 2px 2px 10px rgba(0,0,0,.6);
+    margin-bottom: 10px;
 }
 .banner__logo p {
     font-size: 25px;
+    font-weight: 700;
+    color: #222;
 }
 
 .arrow-down {
@@ -130,26 +134,42 @@ nav ul a:hover {
         transform: translateY(5px);
       }
 }
-
+.about-container {
+    /* background-image: url('img/bg1.jpg');
+    background-position: center;
+    background-size: cover; */
+    padding: 70px 0;
+}
 .about {
     display: grid;
     grid-template-columns: 30% 1fr;
     grid-gap: 15%;
-    padding: 50px 0;
     margin: 0 10%;
 }
+.about:first-child {
+    margin-bottom: 40px;
+}
 .about__title {
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
+    padding-top: 5%;
+}
+.about__title p {
+    padding-top: 5px;
+    font-size: 18px;
+    color: #777;
 }
 
 .about__text {
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 600;
 }
-
+.about__text h1 {
+    color: #222;
+}
 .about__text p {
     margin-bottom: 30px;
+    line-height: 1.5;
 }
 span {
     color: var(--clr); 
@@ -176,9 +196,13 @@ span {
 .portfolio__text h2 {
     font-size: 55px;
     text-align: center;
+    margin-bottom: 10px;
+    color: #000;
 }
 .portfolio__text p {
     font-size: 24px;
+    font-weight: 700;
+    color: #111;
 }
 .portfolio__card {
     min-width: 100px;
@@ -195,6 +219,8 @@ span {
     text-decoration: none;
     color: #0071bc;
 }
+
+
 i.left:hover{
     transform: translateX(-5px);
 }
@@ -202,30 +228,43 @@ i.right:hover{
     transform: translateX(5px);
 }
 
-.contact {
+/* .contact {
     width: 100%;
-    min-height: 500px;
+    height: 100vh;
     background-color: #222;
-    padding: 5%;
 }
-.contact__title h3{
+.contact__title {
+    padding-top: 30px;
     color: #fff;
     text-align: center;
+}
+.contact__title h3{
     font-size: 50px;
 }
 .contact__title p {
-    color: #fff;
-    text-align: center;
     font-size: 18px;
-    padding-top: 0px;
     color: var(--clr);
 }
+
+.contact__content {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 form {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+form .info {
+    color: #fff;
+    margin-top: 30px;
+    font-size: 18px;
 }
 .name-email {
     display: flex;
@@ -270,7 +309,7 @@ textarea {
 .contact__button:hover {
     color: white;
     background-color: var(--clr);
-}
+} */
 
 footer {
     width: 100%;
@@ -278,8 +317,9 @@ footer {
     background-color: #111;
 }
 .footer__content {
+    min-height: 150px;
     display: flex;
-    padding: 30px 5%;
+    padding: 0 5%;
     text-align: center;
     justify-content: space-between;
     align-items: center;
@@ -292,6 +332,7 @@ footer {
     color: white;
     text-decoration: none;
     font-weight: 600;
+    font-size: 18px;
 }
 .footer__links a:hover {
     color: var(--clr);
@@ -343,20 +384,20 @@ p a:hover {
 
     .about__title {
         font-size: 18px;
+        padding-top: 0;
     }
 
     .portfolio {
         background-image: url('img/image3.jpg');
         background-size: cover;
         background-position: center;
-        padding-bottom: 50px;
     }
     .portfolio__text {
         flex-direction: column;
+        padding-bottom: 100px;
     }
 
-
-    input {
+    /* input {
         width: 300px;
     }
     textarea {
@@ -371,7 +412,7 @@ p a:hover {
     }
     .name-email input:first-child {
         margin-right: 0;
-    }
+    } */
 
 }  /* Media Query 768PX ENDS */
 
