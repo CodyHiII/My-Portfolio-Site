@@ -11,7 +11,6 @@
 
 body {
     font-family: 'Catamaran', sans-serif;
-    overflow-x: hidden;
 }
 
 .nav-bar {
@@ -48,7 +47,7 @@ body {
 
 .contact {
     width: 100%;
-    height: calc(100vh - 60px);
+    min-height: calc(100vh - 60px);
     background-color: #222;
 }
 .contact__title {
@@ -65,8 +64,9 @@ body {
 }
 
 .contact__content {
-    margin-top: 70px;
-    width: 100%;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 1000px; 
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -80,8 +80,16 @@ form {
 }
 .info {
     color: #fff;
-    font-size: 18px;
+    font-size: 20px;
 }
+.info p {
+    margin: 20px 0;
+}
+.info i {
+    margin-right: 5px;
+}
+
+
 .name-email {
     display: flex;
 }
@@ -138,20 +146,24 @@ textarea {
 @media (max-width: 768px) {
 
     input {
-        width: 300px;
+        width: 350px;
     }
     textarea {
-        min-width: 300px;
+        min-width: 350px;
     }
     .name-email {
         flex-direction: column;
     }
     .name-email input {
-        min-width: 300px;
-        max-width: 300px;
+        min-width: 350px;
+        max-width: 350px;
     }
     .name-email input:first-child {
         margin-right: 0;
+    }
+    .contact__content {
+        display: flex;
+        flex-direction: column;
     }
 
 }  /* Media Query 768PX ENDS */

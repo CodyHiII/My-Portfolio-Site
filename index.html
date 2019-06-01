@@ -16,7 +16,6 @@
 </head>
 <body>
     
-<div class="wrapper">
 
 <nav>
     <div class="logo">
@@ -26,7 +25,7 @@
     </div>
     <ul class="nav-links">
         <li><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#scroll-about">About</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
@@ -43,11 +42,14 @@
         <p>Web / Graphic Designer</p>
     </div>
     <div class="arrow-down">
-        <a href="#about">
+        <a href="#scroll-about">
             <i class="fas fa-angle-double-down"></i>
         </a>
     </div> 
+    <div id="scroll-about"></div>
 </div> <!-- Banner Class END -->
+
+<div class="wrapper">
 
 <div class="about-container" id="about">
     <div class="about section-1">
@@ -78,15 +80,18 @@
         <div class="designer portfolio__card">
             <h2>Designer</h2>
             <p>Using astonishing modern ways of bringing 2D art to life and great artistic sens when it comes to minimalism.</p>
-            <a href="#"><i class="fas fa-arrow-circle-left left"></i></a>
+            <button class="left"> <a href="#"><i class="fas fa-arrow-circle-left"></i> See Portfolio</a> </button>
         </div>
         <div class="coder portfolio__card">
-                <h2>&#60;Coder/&#62;</h2>
-                <p>With great ambitions and full of excitement towards learning new skills. New when it comes to coding but a really fast learner.</p>
-                <a href="coder.html"><i class="fas fa-arrow-circle-right right"></i></a>
+            <h2>&#60;Coder/&#62;</h2>
+            <p>With great ambitions and full of excitement towards learning new skills. New when it comes to coding but a really fast learner.</p>
+            <button class="right"> <a href="coder.html">See Portfolio <i class="fas fa-arrow-circle-right"></i></a> </button>
             </div>
     </div>
 </div> <!-- Portfolio Class END -->
+
+
+</div> <!-- Wrapper Class END -->
 
 
 <footer>
@@ -102,8 +107,6 @@
             
     </div>
 </footer>
-
-</div> <!-- Wrapper Class END -->
 
 
 <script src="mainJS.js"></script>
