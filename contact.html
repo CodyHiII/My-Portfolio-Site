@@ -16,11 +16,29 @@
 </head>
 <body>
 
-    <div class="nav-bar">
-        <div class="exit-button">
-            <a href="index.html"> <i class="fas fa-sign-out-alt icon"></i> Go Home</a>
-        </div>
-    </div>
+        <nav>
+    
+                <div class="nav-contact">
+                    <a href="index.html"><i class="fas fa-home"></i></a> 
+                </div>
+                        
+                <div class="logo">
+                   <a href="#"><img src="img/logo.png" alt="logo"></a>
+                </div>
+                        
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="coder.html">CODING PROJECTS</a></li>
+                    <li><a href="designer.html">GRAPHIC WORK</a></li>
+                </ul>
+        
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                 </div>
+                        
+            </nav>
     
 <div class="contact" id="contact">
     <div class="contact__title"> 
@@ -37,16 +55,19 @@
                 
     <form action="">
         <div class="name-email">
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
         </div>
             <input type="text" placeholder="Subject">
-            <textarea name="taxe" id="text" placeholder="Your text here!"></textarea>
-            <button class="contact__button">Send <i class="fab fa-telegram-plane"></i></button>
+            <textarea name="taxe" id="text" placeholder="Your text here!" required></textarea>
+            <div>
+                <button type="submit" class="contact__button">Send <i class="fab fa-telegram-plane"></i></button>
+                <button type="reset" class="contact__button">Reset</button>
+            </div>
     </form>
 </div>             
             
 </div> <!-- Contact Class END -->
-
+<script src="main.js"></script>
 </body>
 </html>

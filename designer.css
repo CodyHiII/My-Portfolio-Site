@@ -13,14 +13,13 @@
 html {
     scroll-behavior: smooth;
   }
-
   
 
-.logo img {
+.nav-logo img {
     width: 150px;
     line-height: 100%
 }
-.logo {
+.nav-logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,7 +90,8 @@ nav {
     transform: rotate(45deg) translate(-5px, -6px);
     background-color: #fff;
   }
-  .nav-contact {
+
+.nav-contact {
     width: 80px;
     height: 80px;
     background-color: #2626D0;
@@ -104,14 +104,13 @@ nav {
     color: #fff;
     font-size: 32px;
 }
-
 /* ----------------------------- HEADER  ----------------------------- */
 .header {
     position: relative;
     width: 100%;
     height: 100vh;
     padding-top: 80px;
-    background-image: url('img/mobil-coder\ bg-01.jpg');
+    background-image: url('img/mobile-design\ projects\ bg.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -145,10 +144,10 @@ nav {
     font-size: 20px;
     font-weight: 500;
 }
-.header__buttons {
+.buttons {
     margin: 20px 0;
 }
-.header__buttons button {
+.buttons button {
     padding: 8px 20px;
     margin: 5px;
     font-size: 16px;
@@ -156,144 +155,200 @@ nav {
     border-radius: 50px;
     font-weight: 800;
 }
-.header__buttons button:nth-child(1) {
+.buttons button:nth-child(1) {
     background-color: rgba(255,255,255,.4);
     color: #111;
 }
-.header__buttons button:nth-child(1) a{
+.buttons button:nth-child(1) a{
     color: #111;
     text-decoration: none;
 }
 
 
-.header__buttons button:nth-child(2) {
+.buttons button:nth-child(2) {
     background-color: var(--clr);
 }
-.header__buttons button:nth-child(2) a{
+.buttons button:nth-child(2) a{
     color: #fff;
     text-decoration: none;
 }
 
-.header__buttons button:nth-child(2):hover {
+.buttons button:nth-child(2):hover {
     background-color: #2626D0;
 }
-.header__buttons button:nth-child(1):hover {
+.buttons button:nth-child(1):hover {
     background-color: #111;
 }
-.header__buttons button:nth-child(1):hover a{
+.buttons button:nth-child(1):hover a{
     color: #fff;
 }
 
+/* ----------------------------- Logos  ----------------------------- */
 
-
-
-
-
-
-
-
-
-.cards {
+.projects {
     padding: 50px 10%;
 }
-.cards h2 {
+
+.title {
     text-align: center;
-    font-size: 45px;
-    margin: 50px 0;
+    font-size: 40px;
+    margin: 70px 0;
     font-weight: 800;
 }
-.grid {
+
+.logos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, 
-    minmax(80vw, 1fr));
+    minmax(300px, 300px));
     place-content: center;
+    place-items: center;
 }
-img {
+
+.logo {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+.logo img {
     width: 100%;
 }
 
-.projects__card, .studyCases__card {
-    transition: transform 1000ms ease;
-    background-color: #fff;
-    padding: 30px 0px;
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(36, 150, 226, 0.7);
+    z-index: 1;
+    transition: transform 160ms ease-in-out;
+    transform: translateY(100%);
 }
-
-.projects__card:hover, .studyCases__card:hover {
-    transform: translateY(-10px);
+.overlay p {
+    font-size: 22px;
+    font-weight: 900;
+    margin: 15px;
+    line-height: 1;
 }
-
-.buttons {
-    display: flex;
-    justify-content: center;
-    padding: 5px 0;
-}
-.buttons button {
-    font-size: 18px;
-    padding: 6px 20px;
+.overlay button {
+    position: absolute;
+    font-size: 20px;
     border: none;
-    border-radius: 50px;
+    color: #000;
+    background: none;
     font-weight: 700;
-    background-color: var(--clr);
-    transition: all 150ms ease;
+    bottom: 40px;
+    left: 15px;
 }
-.buttons a {
-    text-decoration: none;
+button i {
+    font-size: 16px;
+    transition: transform 200ms ease-in;
+}
+.overlay button::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+}
+.overlay button:hover {
     color: #fff;
 }
-
-.buttons button:first-child {
-    padding: 6px 40px;
-    margin-right: 10px;
+.overlay button:hover::after {
+    background-color: #fff;
 }
 
-.buttons button:hover {
-    background-color: #111;
+.logo:hover .overlay {
+    transform: translateY(0);
+}
+/* ----------------------------- Logos  ----------------------------- */
+/* ----------------------------- Business Card  ----------------------------- */
+
+.business-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 
+    minmax(300px, 300px));
+    place-content: center;
+    place-items: center;
+    grid-gap: 10px;
 }
 
 
-.grid h3 {
-    font-size: 24px;
-    font-weight: 800;
-    padding: 0 10px;
-    margin-bottom: 6px;
-    color: #111;
+.card-container {
+    position: relative;
+    width: 188px;
+    height: 340px;
+    perspective: 700px;
 }
-.grid p {
-    font-size: 18px;
-    padding: 0 10px;
-    margin-bottom: 6px;
-    font-weight: 550;
-    color: #333;
-}
-span {
-    color: var(--clr);
-}
-footer {
-    width: 100%;
-    height: 100px;
-    background-color: #111;
-}
-.footer__content {
+.card {
+    position: absolute;
     height: 100%;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    color: white;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: all 400ms ease-in-out;
 }
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.back {
+    transform: rotateY(-180deg);
+}
+
+.card-container:hover .card{
+    transform: rotateY(-180deg);
+}
+
+
+
+
+
+/* ----------------------------- Business Card  ----------------------------- */
+
+/* ----------------------------- Business Card  ----------------------------- */
+
+.t-shirts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 
+    minmax(300px, 300px));
+    place-content: center;
+    place-items: center;
+    grid-gap: 10px;
+}
+
+
+.t-card {
+    width: 300px;
+    height: 300px;
+}
+.t-card img {
+    width:100%;
+}
+.t-card:hover img {
+    border-radius: 0%;
+}
+
+
+/* ----------------------------- Business Card  ----------------------------- */
+
+
+
+
+
+
+
+
 
 
 
 
 
 @media (min-width: 768px) {
-    .grid {
-        grid-template-columns: repeat(auto-fit, 
-        minmax(22rem, 1fr));
-    }
-    .logo img {
+    .nav-logo img {
         width: 250px;
-        line-height: 100%
+        line-height: 100%;
     }
 
     .nav-links {
@@ -315,7 +370,7 @@ footer {
 
 @media (min-width: 992px) {
     .header {
-        background-image: url('img/desk-coder\ bg-01.jpg');
+        background-image: url('img/desk-design\ projects\ bg.jpg');
     }
     .illustration {
         width: 450px;
@@ -357,4 +412,3 @@ footer {
         width: 700px;
     }
 }
-
